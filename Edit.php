@@ -25,22 +25,70 @@ if(isset($_GET['edit_id'])) {
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
     <title>Edit User</title>
 </head>
-<body>
-    <h1>Edit User</h1>
-    <form action="update.php" method="POST">
-        <div class="inputss">
-        <input type="hidden" name="edit_id" value="<?php echo $edit_id; ?>">
-        <input type="text" name="username" value="<?php echo $username; ?>">
-        <input type="text" name="fullname" value="<?php echo $fullname; ?>">
-        <input type="text" name="course" value="<?php echo $course; ?>">
-        <input type="email" name="email" value="<?php echo $email; ?>">
-        <input type="text" name="contact" value="<?php echo $contact; ?>">
-        <button type="submit" value="submit" name="submit">Save</button>
-    </form>
-    </div>
+<style>body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
 
+h1 {
+    text-align: center;
+}
+
+.inputs {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+.inputs input {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.inputs button {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+.inputs button:hover {
+    background-color: #0056b3;
+}
+</style>
+<body>
+    <div>
+    <h1>Edit User</h1>
+    <div class="container">
+    <form action="update.php" method="POST"></div>
+        <div class="inputs">
+            <input type="hidden" name="edit_id" value="<?php echo $edit_id; ?>">
+            <input type="text" name="username" value="<?php echo $username; ?>" placeholder="Username">
+            <input type="text" name="fullname" value="<?php echo $fullname; ?>" placeholder="Full Name">
+            <input type="text" name="course" value="<?php echo $course; ?>" placeholder="Course">
+            <input type="email" name="email" value="<?php echo $email; ?>" placeholder="Email">
+            <input type="text" name="contact" value="<?php echo $contact; ?>" placeholder="Contact">
+            <button type="submit" value="submit" name="submit">Save</button>
+        </div>
+    </div>
+    </form>
 </body>
 </html>
+

@@ -8,13 +8,17 @@
     <title>Stundent Entry</title>
 </head>
 <body>
+    <nav>
+        <header>
+            <a href="login.php">Logout</a>
+        </header>
+    </nav>
     <div class="container">
  <form action="#" method="post">
     <div class="row">
                 <div class="inputs">
-                    <h2>Entries</h2>
 					<input type="text" name="username" placeholder="Username">
-					<input type="text" name="fullname" placeholder="Full Name">
+					<input type="text" name="fullname" placeholder="Fullname">
                     <input type="text" name="course" placeholder="Course">
                     <input type="email" name="email" placeholder="Email">
 					<input type="text" name="contact" placeholder="Contact">
@@ -24,6 +28,15 @@
         </div>
   <div class="column2">
   <style>
+        .inputs{
+            color: black;
+
+        }
+        
+        .inputs button{
+            margin-left:85px;
+            background-color: Gray;
+        }
         table {
             width: 100%;
             border-collapse: collapse;
@@ -32,13 +45,15 @@
             margin: 50px;
             border: 2px solid black;
             padding: 8px;
+            margin-right: 20px;
         }
         th {
-            background-color: gray;
+            background-color: #007bff;
         }
     </style>
 
-
+</div>
+</div>
 <?php
 include 'config.php';
 
@@ -63,8 +78,7 @@ $connection->close();
 
 ?>
     
-</div>
-</div>
+
 
 
 <?php
